@@ -1,0 +1,26 @@
+dist
+lib
+temp
+
+.turbo
+.pnpm-store
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+**/*.less.d.ts
+**/*.css.d.ts
+
+/.vscode/
+.idea
+
+
+
+
+*.log
+*.local
+
+# misc
+.DS_Store
+.env*
