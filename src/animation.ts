@@ -1,9 +1,6 @@
 import { AnimationProps } from './utils'
 
-export const DEFAULT_ANIMATIONS: Record<
-  string,
-  Omit<AnimationProps, 'name' | 'duration'> & { duration: number }
-> = {
+export const DEFAULT_ANIMATIONS: Record<string, Omit<AnimationProps, 'name' | 'duration'> & { duration: number }> = {
   moveToLeft: {
     duration: 600,
     timing: 'ease',

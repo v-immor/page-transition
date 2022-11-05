@@ -6,13 +6,7 @@ export type PresetKeys = keyof typeof PRESET_ANIMATIONS
 
 export type DefaultAnimations = keyof typeof DEFAULT_ANIMATIONS
 
-export type TransitionEventKeys =
-  | 'onExiting'
-  | 'onExit'
-  | 'onExited'
-  | 'onEnter'
-  | 'onEntering'
-  | 'onEntered'
+export type TransitionEventKeys = 'onExiting' | 'onExit' | 'onExited' | 'onEnter' | 'onEntering' | 'onEntered'
 
 export type DefaultStatusMap = {
   [key in TransitionStatus]?: {

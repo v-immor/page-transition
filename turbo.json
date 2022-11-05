@@ -3,8 +3,8 @@
     "build": {
       "outputs": ["dist/**"]
     },
-    "lint": {
-      "outputs": []
+    "build:lib": {
+      "outputs": ["lib/**"]
     }
   }
 }

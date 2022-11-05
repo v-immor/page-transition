@@ -28,10 +28,7 @@ export const createAnimationStyles = (props: AnimationProps): CSSProperties => {
   return style
 }
 
-export const getEnterOrExitAnimationStyle = (
-  props: Pick<PageTransitionProps, 'preset' | 'enter' | 'exit'>,
-  type: 'exit' | 'enter'
-) => {
+export const getEnterOrExitAnimationStyle = (props: Pick<PageTransitionProps, 'preset' | 'enter' | 'exit'>, type: 'exit' | 'enter') => {
   let animation: AnimationProps | null = null
 
   if (props.preset) {

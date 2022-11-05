@@ -5,8 +5,7 @@ import { TransitionProps } from 'react-transition-group/Transition'
 import { AnimationProps, DEFAULT_WRAPPER_STYLE, getEnterOrExitAnimationStyle } from './utils'
 import { DefaultAnimations, DefaultStatusMap, PresetKeys, TransitionEventKeys } from './interface'
 
-export interface PageTransitionProps
-  extends Pick<TransitionProps<HTMLDivElement>, TransitionEventKeys> {
+export interface PageTransitionProps extends Pick<TransitionProps<HTMLDivElement>, TransitionEventKeys> {
   enter?: DefaultAnimations | AnimationProps
   exit?: DefaultAnimations | AnimationProps
   preset?: PresetKeys
@@ -17,16 +16,7 @@ export interface PageTransitionProps
 }
 
 function PageTransition(props: PageTransitionProps) {
-  const {
-    enter,
-    exit,
-    preset,
-    children,
-    transitionKey,
-    outerWrapperClassName,
-    outerWrapperStyle,
-    ...otherProps
-  } = props
+  const { enter, exit, preset, children, transitionKey, outerWrapperClassName, outerWrapperStyle, ...otherProps } = props
 
   const statusMap = React.useMemo<DefaultStatusMap>(
     () => ({
@@ -37,10 +27,7 @@ function PageTransition(props: PageTransitionProps) {
   )
 
   const timeout = React.useMemo(
-    () =>
-      statusMap.entering?.duration && statusMap.exiting?.duration
-        ? Math.max(statusMap.entering.duration, statusMap.exiting.duration)
-        : 0,
+    () => (statusMap.entering?.duration && statusMap.exiting?.duration ? Math.max(statusMap.entering.duration, statusMap.exiting.duration) : 0),
     [statusMap]
   )
 
