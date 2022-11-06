@@ -1,10 +1,9 @@
 import { useRoutes } from 'react-router-dom'
 
 import PageA from './pages/page-a'
-import PageB from './pages/page-b'
-import PageC from './pages/page-c'
 
 import BaseLayout from './layouts/base-layout'
+import PagePanel from './components/page-panel'
 
 function App() {
   return useRoutes([
@@ -14,15 +13,15 @@ function App() {
       children: [
         {
           path: '/a',
-          element: <PageA />,
+          element: <PagePanel title="Your Abilities Are Limitless!" desc="From Your Imagination" />,
         },
         {
           path: '/b',
-          element: <PageB />,
+          element: <PagePanel title="Your Abilities Are Limitless!" desc="From Your Imagination" />,
         },
         {
           path: '/c',
-          element: <PageC />,
+          element: <PagePanel title="Your Abilities Are Limitless!" desc="From Your Imagination" />,
         },
         {
           path: '/',

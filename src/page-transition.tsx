@@ -18,6 +18,8 @@ export interface PageTransitionProps extends Pick<TransitionProps<HTMLDivElement
 function PageTransition(props: PageTransitionProps) {
   const { enter, exit, preset, children, transitionKey, outerWrapperClassName, outerWrapperStyle, ...otherProps } = props
 
+  const nodeRef = React.useRef(null)
+
   const statusMap = React.useMemo<DefaultStatusMap>(
     () => ({
       entering: getEnterOrExitAnimationStyle({ enter, exit, preset }, 'enter'),
@@ -44,13 +46,14 @@ function PageTransition(props: PageTransitionProps) {
       className={outerWrapperClassName}
     >
       <TransitionGroup component={null}>
-        <Transition {...otherProps} key={transitionKey} timeout={timeout}>
+        <Transition {...otherProps} key={transitionKey} timeout={timeout} nodeRef={nodeRef}>
           {(status) => (
             <div
               style={{
                 ...DEFAULT_WRAPPER_STYLE,
                 ...statusMap[status]?.style,
               }}
+              ref={nodeRef}
             >
               {children}
             </div>

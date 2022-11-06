@@ -10,7 +10,7 @@ export default defineConfig({
     copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: '@vs/page-transition',
+      name: '@v-immor/page-transition',
       fileName: (mode) => (mode === 'es' ? 'index.js' : `index.${mode}.js`),
     },
     outDir: 'lib',

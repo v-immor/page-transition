@@ -1,5 +1,5 @@
 {
-  "name": "@vs/page-transition",
+  "name": "@v-immor/page-transition",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -33,15 +33,16 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/react-syntax-highlighter": "^15.5.5",
     "@types/react-transition-group": "^4.4.5",
     "@vitejs/plugin-react": "^2.0.1",
-    "@vs/page-transition": "link:",
+    "@v-immor/page-transition": "link:",
     "autoprefixer": "^10.4.9",
     "less": "^4.1.3",
     "postcss": "^8.4.16",
@@ -49,6 +50,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
+    "react-syntax-highlighter": "^15.5.0",
     "tailwindcss": "^3.1.8",
     "turbo": "^1.6.3",
     "typescript": "^4.6.4",
