@@ -9,36 +9,65 @@ function BaseLayout() {
   const [preset, setPreset] = useState<PresetKeys>('fadeFromLeft')
 
   return (
-    <div className="h-full bg-lime-500">
-      <header>
-        <Link to="/">home</Link>
-      </header>
-      <main className="h-full">
-        <div className="w-[1200px] my-3 mx-auto flex items-center">
-          <label className="text-gray-500">preset：</label>
-          <select className="rounded-md text-gray-500 h-14 min-w-[256px] w-full px-4 appearance-none focus-visible:outline-none" onChange={(e) => setPreset(e.target.value as any)}>
-            {presetOptions.map((ops) => (
-              <option key={ops} value={ops}>
-                {ops}
-              </option>
-            ))}
-          </select>
+    <div className="relative h-full">
+      <div className="navbar bg-base-100 fixed top-0 left-0 z-10 shadow-lg">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </label>
+            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <Link to="/a">Page A</Link>
+              </li>
+              <li>
+                <Link to="/b">Page B</Link>
+              </li>
+              <li>
+                <Link to="/c">Page C</Link>
+              </li>
+            </ul>
+          </div>
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
+            page-transition
+          </Link>
         </div>
-        <div className="flex justify-center items-center my-3 mx-auto">
-          <Link to="/a" className="text-2xl text-white rounded-md font-medium decoration-0 py-3 px-6 hover:bg-[rgba(47,66,80,0.2)]">
-            to A
-          </Link>
-          <Link className="text-2xl text-white rounded-md font-medium decoration-0 py-3 px-6 hover:bg-[rgba(47,66,80,0.2)]" to="/b">
-            to B
-          </Link>
-          <Link className="text-2xl text-white rounded-md font-medium decoration-0 py-3 px-6 hover:bg-[rgba(47,66,80,0.2)]" to="/c">
-            to C
-          </Link>
+        <div className="navbar-center hidden md:flex">
+          <ul className="menu menu-horizontal p-0">
+            <li className="mr-1">
+              <Link to="/a">Page A</Link>
+            </li>
+            <li className="mr-1">
+              <Link to="/b">Page B</Link>
+            </li>
+            <li className="mr-1">
+              <Link to="/c">Page C</Link>
+            </li>
+          </ul>
         </div>
-        <PageTransition transitionKey={location.pathname} preset={preset}>
+        <div className="navbar-end">
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn m-1">
+              {preset}
+            </label>
+            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box h-96 overflow-y-auto flex-nowrap">
+              {presetOptions.map((ops) => (
+                <li key={ops} onClick={() => setPreset(ops)}>
+                  <a>{ops}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <a className="btn">GitHub</a>
+        </div>
+      </div>
+      <PageTransition transitionKey={location.pathname} preset={preset}>
+        <main className="h-full overflow-y-auto pt-16">
           <Outlet />
-        </PageTransition>
-      </main>
+        </main>
+      </PageTransition>
     </div>
   )
 }
