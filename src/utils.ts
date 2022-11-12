@@ -58,28 +58,33 @@ export const getEnterOrExitAnimationStyle = (props: Pick<PageTransitionProps, 'p
     }
   }
 
+  let style: CSSProperties = {}
+
   if (animation) {
-    return {
-      duration: animation.duration,
-      style: createAnimationStyles(animation),
+    style = {
+      ...createAnimationStyles(animation),
+      // position: type === 'enter' ? 'absolute' : 'absolute',
+      // visibility: type === 'enter' ? 'visible' : 'hidden',
+      // display: type === 'exit' ? 'none' : '',
     }
   }
 
   return {
-    duration: 0,
-    style: {},
+    duration: animation ? animation.duration : 0,
+    style,
   }
 }
 
 export const DEFAULT_WRAPPER_STYLE: React.CSSProperties = {
-  position: 'absolute',
-  left: 0,
-  top: 0,
-  width: '100%',
   height: '100%',
-  overflow: 'hidden',
+  width: '100%',
+  position: 'absolute',
+  top: 0,
+  left: 0,
   backfaceVisibility: 'hidden',
-  transform: 'translate3d(0, 0, 0)',
   transformStyle: 'preserve-3d',
+  transform: 'translate3d(0, 0, 0)',
   willChange: 'transform',
+  perspective: 1200,
+  overflow: 'hidden',
 }

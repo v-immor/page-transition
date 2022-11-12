@@ -1,16 +1,15 @@
 import { useState } from 'react'
-import { Link, Outlet, useLocation } from 'react-router-dom'
-import { PRESET_ANIMATIONS, PageTransition, PresetKeys } from '@v-immor/page-transition'
+import { Link, Outlet } from 'react-router-dom'
+import { PRESET_ANIMATIONS, PresetKeys } from '@v-immor/page-transition'
 
 const presetOptions = Object.keys(PRESET_ANIMATIONS).map((key) => key)
 
 function BaseLayout() {
-  const location = useLocation()
   const [preset, setPreset] = useState<PresetKeys>('fadeFromLeft')
 
   return (
     <div className="relative h-full">
-      <div className="navbar bg-base-100 fixed top-0 left-0 z-10 shadow-lg">
+      <div className="navbar bg-base-100 fixed top-0 left-0 z-[1] shadow-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost md:hidden">
@@ -54,7 +53,13 @@ function BaseLayout() {
             </label>
             <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box h-96 overflow-y-auto flex-nowrap">
               {presetOptions.map((ops) => (
-                <li key={ops} onClick={() => setPreset(ops)}>
+                <li
+                  key={ops}
+                  onClick={(e) => {
+                    e.currentTarget.blur()
+                    setPreset(ops as any)
+                  }}
+                >
                   <a>{ops}</a>
                 </li>
               ))}
@@ -63,11 +68,9 @@ function BaseLayout() {
           <a className="btn">GitHub</a>
         </div>
       </div>
-      <PageTransition transitionKey={location.pathname} preset={preset}>
-        <main className="h-full overflow-y-auto pt-16">
-          <Outlet />
-        </main>
-      </PageTransition>
+      <main className="h-full pt-20 bg-orange-300">
+        <Outlet />
+      </main>
     </div>
   )
 }

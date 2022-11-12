@@ -7,9 +7,8 @@ import demoCode from './demo?raw'
 interface Props {}
 
 function Page(props: Props) {
-  console.log(demoCode, 'd')
   return (
-    <div className="text-center">
+    <div className="text-center pt-20">
       <div className="p-4">
         <p>if use react-router V6, the use as</p>
         <SyntaxHighlighter

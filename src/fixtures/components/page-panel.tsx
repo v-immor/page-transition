@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import { Link } from 'react-router-dom'
 
 interface PagePanelProps {
   title: string
@@ -11,7 +12,7 @@ function PagePanel(props: PagePanelProps) {
   }, [props.title])
 
   return (
-    <div className="text-center">
+    <div className="text-center bg-red-300 h-full pt-20">
       <h1 className="text-6xl">{props.title}</h1>
       <h6 className="text-4xl mt-4">{props.desc}</h6>
     </div>

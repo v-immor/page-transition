@@ -17,7 +17,7 @@
       "require": "./lib/index.umd.js",
       "types": "./lib/index.d.ts"
     },
-    "./lib/animation.css": "./lib/animation.css"
+    "./animation.css": "./lib/animation.css"
   },
   "main": "./lib/index.umd.js",
   "module": "./lib/index.js",

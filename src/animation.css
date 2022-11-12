@@ -6,13 +6,13 @@
   from {
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotateZ(0.01deg);
   }
 }
 
@@ -20,13 +20,13 @@
   from {
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(100%) rotateZ(0.01deg);
   }
 }
 
@@ -34,13 +34,13 @@
   from {
   }
   to {
-    transform: translateY(-100%);
+    transform: translateY(-100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromTop {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-100%) rotateZ(0.01deg);
   }
 }
 
@@ -48,13 +48,13 @@
   from {
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromBottom {
   from {
-    transform: translateY(100%);
+    transform: translateY(100%) rotateZ(0.01deg);
   }
 }
 
@@ -75,14 +75,14 @@
   }
   to {
     opacity: 0.3;
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromLeftFade {
   from {
     opacity: 0.3;
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotateZ(0.01deg);
   }
 }
 
@@ -91,14 +91,14 @@
   }
   to {
     opacity: 0.3;
-    transform: translateX(100%);
+    transform: translateX(100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromRightFade {
   from {
     opacity: 0.3;
-    transform: translateX(100%);
+    transform: translateX(100%) rotateZ(0.01deg);
   }
 }
 
@@ -107,14 +107,14 @@
   }
   to {
     opacity: 0.3;
-    transform: translateY(-100%);
+    transform: translateY(-100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromTopFade {
   from {
     opacity: 0.3;
-    transform: translateY(-100%);
+    transform: translateY(-100%) rotateZ(0.01deg);
   }
 }
 
@@ -123,14 +123,14 @@
   }
   to {
     opacity: 0.3;
-    transform: translateY(100%);
+    transform: translateY(100%) rotateZ(0.01deg);
   }
 }
 
 @keyframes moveFromBottomFade {
   from {
     opacity: 0.3;
-    transform: translateY(100%);
+    transform: translateY(100%) rotateZ(0.01deg);
   }
 }
 
