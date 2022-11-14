@@ -1,9 +1,9 @@
 {
   "name": "@v-immor/page-transition",
-  "private": true,
   "version": "0.0.0",
   "author": {
-    "name": "@v-immor"
+    "name": "@v-immor",
+    "email": "wangguowei011@163.com"
   },
   "type": "module",
   "license": "MIT",
