@@ -49,11 +49,11 @@ function PageTransition(props: PageTransitionProps) {
         <Transition {...otherProps} key={transitionKey} timeout={timeout} nodeRef={nodeRef}>
           {(status) => (
             <div
+              ref={nodeRef}
               style={{
                 ...DEFAULT_WRAPPER_STYLE,
                 ...statusMap[status]?.style,
               }}
-              ref={nodeRef}
             >
               {children}
             </div>
