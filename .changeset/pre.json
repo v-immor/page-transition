@@ -4,5 +4,7 @@
   "initialVersions": {
     "@v-immor/page-transition": "0.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "seven-pans-arrive"
+  ]
 }
