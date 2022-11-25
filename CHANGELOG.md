@@ -1,5 +1,11 @@
 # @v-immor/page-transition
 
+## 0.0.2
+
+### Patch Changes
+
+- feat: export react-transition-group
+
 ## 0.0.1
 
 ### Patch Changes
