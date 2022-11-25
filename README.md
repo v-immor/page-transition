@@ -1,24 +1,5 @@
-# The Package From `@steveeeie/react-page-transition`. The Difference Is That It Does Not use `styled-components`.
-
 # React Page Transition
-
-⚛️💨 A React component that makes it easy to use the page transitions from the Codedrops Page Transitions Demo [See Original](https://tympanus.net/Development/PageTransitions/).
-
-<!-- ### [View Basic Demo](https://codesandbox.io/s/basic-react-page-transition-demo-rk0uv)
-
-### [View Advanced Demo](https://codesandbox.io/s/advanced-react-page-transition-demo-z8hmd)
-
-### [View TypeScript Demo](https://codesandbox.io/s/advanced-react-page-transition-demo-typescript-nb4lzk) -->
-
----
-
-<!-- <p align="center">
-<img src="https://github.com/Steveeeie/react-page-transition/blob/master/preview-1.gif?raw=true" alt="preview" width="100%" />  <br/>
-<img src="https://github.com/Steveeeie/react-page-transition/blob/master/preview-2.gif?raw=true" alt="preview" width="100%" />
-</p> -->
-
----
-
+## The Package From `@steveeeie/react-page-transition`. The Difference Is That It Does Not use `styled-components`.
 ## Usage with `react-router` v5
 
 ### 1. Install Package
@@ -122,5 +103,3 @@ body,
 | `outerWrapperStyle` | No | `React.CSSProperties` | wrapper style |
 \*
 | `outerWrapperClassName` | No | string | wrapper class |
-
-##### \* [View the advanced demo](https://codesandbox.io/s/advanced-react-page-transition-demo-z8hmd) for the full list of presets and animations.
